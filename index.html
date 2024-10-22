@@ -3,188 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EAT WISE - Empowering Africa Together</title>
-
-    <!-- External Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-    <!-- CSS for Styling -->
+    <link rel="icon" href="your-icon-link.ico" type="image/x-icon"/>
+    <title>EAT WISE</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f4;
-            scroll-behavior: smooth;
         }
-
         header {
-            background-color: #2b2d42;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        header h1 {
-            margin: 0;
-            font-weight: 600;
-            font-size: 2rem;
-        }
-
-        nav {
-            margin-top: 10px;
-        }
-
-        nav a {
-            margin: 0 15px;
-            color: #fff;
-            text-decoration: none;
-            font-weight: 300;
-        }
-
-        nav a:hover {
-            color: #fca311;
-        }
-
-        .hero {
-            background: linear-gradient(to right, rgba(43, 45, 66, 0.8), rgba(0, 0, 0, 0.5)), 
-                url('https://source.unsplash.com/1600x900/?africa,food') no-repeat center center/cover;
-            height: 80vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+            background: #4CAF50;
             color: white;
+            padding: 15px;
+            text-align: center;
         }
-
-        .hero h2 {
-            font-size: 3rem;
-            margin: 0;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin: 10px 0;
-        }
-
-        .cta-button {
-            background-color: #fca311;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1rem;
-            color: white;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: #e76f51;
-        }
-
         main {
-            padding: 50px;
-            text-align: center;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
-        .donation-section {
-            margin-top: 50px;
+        h2 {
+            color: #4CAF50;
         }
-
-        .donate-button {
-            background-color: #2b2d42;
-            border: none;
-            padding: 15px 40px;
-            font-size: 1.2rem;
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background: #4CAF50;
             color: white;
+            border: none;
+            padding: 10px 20px;
             cursor: pointer;
             border-radius: 5px;
-            transition: transform 0.2s;
+            margin-top: 10px;
         }
-
+        button:hover {
+            background: #45a049;
+        }
+        .donate-button {
+            background: #FF5722;
+            margin-top: 20px;
+        }
         .donate-button:hover {
-            transform: scale(1.05);
-            background-color: #fca311;
+            background: #e64a19;
         }
-
         footer {
-            background-color: #2b2d42;
-            color: white;
-            padding: 20px;
             text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        footer a {
-            color: #fca311;
-            text-decoration: none;
+            margin-top: 20px;
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
         }
     </style>
 </head>
-
 <body>
-
-    <!-- Header Section -->
     <header>
         <h1>EAT WISE</h1>
-        <nav>
-            <a href="#about">About Us</a>
-            <a href="#mission">Our Mission</a>
-            <a href="#donate">Donate</a>
-        </nav>
+        <p>Your guide to healthy eating</p>
     </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div>
-            <h2>Empowering Africa, One Meal at a Time</h2>
-            <p>Join us in making a difference. Every donation counts!</p>
-            <button class="cta-button" onclick="scrollToDonate()">Get Involved</button>
-        </div>
-    </section>
-
-    <!-- Main Content -->
     <main>
-        <section id="about">
-            <h2>About EAT WISE</h2>
-            <p>We are a non-profit initiative dedicated to addressing food insecurity across Africa. Our mission is to provide sustainable solutions, promote agricultural development, and empower communities with knowledge and resources to build a better future.</p>
-        </section>
+        <h2>Contact Us</h2>
+        <form action="/submit" method="POST">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first_name" autocomplete="given-name" required>
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
 
-        <section id="mission" class="donation-section">
-            <h2>Our Mission</h2>
-            <p>We believe in sustainable growth and equal opportunities. Through food drives, community programs, and strategic partnerships, we aim to eradicate hunger and promote wellness across the continent.</p>
-        </section>
-
-        <!-- Donation Section -->
-        <section id="donate" class="donation-section">
-            <h2>Support Our Cause</h2>
-            <p>Your generous donation will help us expand our outreach and impact lives.</p>
-            <button class="donate-button" onclick="donateNow()">Donate Now</button>
-        </section>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+        
+        <h2>Support Us</h2>
+        <p>Your donations help us continue our work.</p>
+        <button class="donate-button" onclick="window.location.href='https://your-donation-link.com';">Donate Now</button>
     </main>
-
-    <!-- Footer -->
+    
     <footer>
-        <p>&copy; 2024 EAT WISE. All Rights Reserved. | <a href="#about">About Us</a></p>
+        <p>&copy; 2024 EAT WISE. All rights reserved.</p>
     </footer>
-
-    <!-- JavaScript -->
-    <script>
-        function scrollToDonate() {
-            document.getElementById('donate').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function donateNow() {
-            alert('Thank you for your interest in donating! Redirecting to our donation portal...');
-            // Redirect to the donation page (replace with real URL)
-            window.location.href = 'https://example.com/donate';
-        }
-    </script>
-
 </body>
 </html>
+
